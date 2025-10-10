@@ -1,5 +1,7 @@
     body{text-align: center;font-family: Arial, Helvetica, sans-serif;
-    
+        background: linear-gradient(180deg, #006994 0%, #0077BE 20%, #008B8B 40%, #20B2AA 60%, #48D1CC 80%, #5F9EA0 100%);
+        min-height: 100vh;
+        margin: 0;
     }
     p{color: white; font-size: 25px; }
     h1{color: skyblue;}
