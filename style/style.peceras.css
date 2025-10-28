@@ -1,0 +1,87 @@
+body {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(180deg, #006994 0%, #0077BE 20%, #008B8B 40%, #20B2AA 60%, #48D1CC 80%, #5F9EA0 100%);
+    min-height: 100vh;
+    margin: 0;
+}
+
+p {
+    color: rgb(228, 228, 228);
+    font-size: 25px;
+}
+
+h1 {
+    color: rgb(18, 18, 189);
+    text-shadow: 5px 5px 0px rgb(71, 71, 71);
+    font-size: 60px;
+}
+
+h2 {
+    color: darkslateblue;
+    text-align: center;
+}
+/* Price section layout */
+.price-section {
+    max-width: 1000px;
+    margin: 24px auto;
+    padding: 12px 16px;
+}
+
+.price-section h2 {
+    margin: 0 0 12px 0;
+}
+
+.price-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 24px;
+}
+
+.price-list {
+    flex: 1 1 0;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    color: rgb(240, 240, 240);
+    font-size: 20px;
+    text-align: left;
+}
+
+.price-list li {
+    padding: 6px 0;
+}
+
+.price-img {
+    flex: 0 0 300px;
+    width: 300px;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Responsive: stack image and list on smaller screens */
+@media (max-width: 700px) {
+    .price-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .price-img {
+        width: 90%;
+        flex: 0 0 auto;
+    }
+    .price-list {
+        width: 100%;
+        margin-top: 12px;
+    }
+}
+    /* Logo image margin */
+    img[src$="logo.jpg"] {
+        margin: 24px auto 24px auto;
+        display: block;
+        border-radius: 50%; /* Circular shape */
+        box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.4), 0 1.5px 6px 0 #b2ebf2 inset; /* 3D effect */
+        border: 8px solid #00bcd4; /* 3D border color */
+        background: linear-gradient(145deg, #e0f7fa 0%, #b2ebf2 100%); /* Subtle 3D background */
+    }
