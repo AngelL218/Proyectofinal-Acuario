@@ -20,3 +20,60 @@ h1 {
 h2 {
     color: darkslateblue;
 }
+
+/* Layout de catálogo: cada categoría como caja y sus productos en 3 columnas */
+.catalog {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.category {
+    background: rgba(255,255,255,0.9);
+    border: 1px solid rgba(0,0,0,0.12);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8rem;
+    align-items: start;
+}
+
+.category > h2 {
+    grid-column: 1 / -1; /* el título ocupa toda la fila */
+    margin: 0 0 0.5rem 0;
+    padding-bottom: 0.25rem;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.product {
+    background: #f8fbff;
+    padding: 0.6rem;
+    border-radius: 6px;
+    border: 1px solid rgba(0,0,0,0.04);
+    text-align: left;
+    min-height: 60px;
+}
+
+.product h3 {
+    margin: 0 0 0.25rem 0;
+    font-size: 1rem;
+}
+
+/* Marcas, peso y pequeños detalles */
+.brand, .weight {
+    display: inline-block;
+    margin-right: 0.4rem;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.description, .benefits, .instructions {
+    font-size: 0.9rem;
+    color: #333;
+    margin-top: 0.25rem;
+}
+
+
