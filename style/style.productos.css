@@ -77,3 +77,12 @@ h2 {
 }
 
 
+    /* Logo image margin */
+    img[src$="logo.jpg"] {
+        margin: 24px auto 24px auto;
+        display: block;
+        border-radius: 50%; /* Circular shape */
+        box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.4), 0 1.5px 6px 0 #b2ebf2 inset; /* 3D effect */
+        border: 8px solid #00bcd4; /* 3D border color */
+        background: linear-gradient(145deg, #e0f7fa 0%, #b2ebf2 100%); /* Subtle 3D background */
+    }
