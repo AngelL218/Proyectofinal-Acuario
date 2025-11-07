@@ -95,33 +95,67 @@ h2 {
 
 .price-content {
     display: flex;
-    flex-wrap: wrap; /* permite que se apilen sin media query */
-    align-items: flex-start;
-    justify-content: center;
-    gap: 24px;
-}
-
-.price-list {
-    flex: 1 1 320px; 
-    list-style: none;
-    padding-left: 0;
-    margin: 0;
-    color: rgb(240, 240, 240);
-    font-size: 20px;
-    text-align: left;
-}
-
-.price-list li {
-    padding: 6px 0;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .price-img {
-    flex: 1 1 300px; 
-    max-width: 300px;
     width: 100%;
+    max-width: 400px;
+    margin: 0 auto 16px auto;
     height: auto;
-    border-radius: 6px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+}
+
+/* Grid de tarjetas de productos */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+    margin-top: 12px;
+}
+
+.product-card {
+    background: rgba(255, 255, 255, 0.12);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 16px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    text-align: center;
+    position: relative;
+}
+
+.product-card:hover {
+    background: rgba(255, 255, 255, 0.18);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.product-card.selected {
+    background: rgba(0, 188, 212, 0.35);
+    border-color: rgba(0, 188, 212, 0.8);
+    box-shadow: 0 0 0 3px rgba(0, 188, 212, 0.4);
+}
+
+.product-card .gallons {
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.product-card .price {
+    font-size: 20px;
+    font-weight: 600;
+    color: #4eff4e;
+    margin-bottom: 6px;
+}
+
+.product-card .dimensions {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
 }
     /* Logo image margin */
     img[src$="logo.jpg"] {

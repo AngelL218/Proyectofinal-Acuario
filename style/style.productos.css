@@ -14,8 +14,8 @@ p {
 
 h1 {
     color: rgb(18, 18, 189);
-    text-shadow: 5px 5px 0px rgb(71, 71, 71);
     font-size: 60px;
+    
 }
 
 h2 {
@@ -94,59 +94,138 @@ h2 {
     outline: none;
 }
 
-/* Layout de catálogo: cada categoría como caja y sus productos en 3 columnas */
+/* Layout de catálogo: cada categoría como caja con productos en grid */
 .catalog {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 24px;
 }
 
 .category {
-    background: rgba(255,255,255,0.9);
-    border: 1px solid rgba(0,0,0,0.12);
-    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
-    padding: 1rem;
-    margin: 1rem 0;
-    border-radius: 8px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.8rem;
-    align-items: start;
+    background: rgba(255,255,255,0.15);
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    padding: 24px;
+    margin: 32px auto;
+    border-radius: 16px;
+    backdrop-filter: blur(8px);
 }
 
 .category > h2 {
-    grid-column: 1 / -1; /* el título ocupa toda la fila */
-    margin: 0 0 0.5rem 0;
-    padding-bottom: 0.25rem;
-    border-bottom: 1px solid rgba(0,0,0,0.06);
+    margin: 0 0 20px 0;
+    padding-bottom: 16px;
+    border-bottom: 3px solid rgba(255,255,255,0.4);
+    color: #ffffff;
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
 }
 
+/* Grid de productos como tarjetas */
+.category {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.category > h2 {
+    order: -1;
+}
+
+/* Contenedor de producto con info y grid de imágenes */
 .product {
-    background: #f8fbff;
-    padding: 0.6rem;
-    border-radius: 6px;
-    border: 1px solid rgba(0,0,0,0.04);
-    text-align: left;
-    min-height: 60px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    padding: 20px;
+    transition: all 0.25s ease;
+}
+
+.product:hover {
+    background: rgba(255, 255, 255, 0.12);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
 }
 
 .product h3 {
-    margin: 0 0 0.25rem 0;
-    font-size: 1rem;
+    margin: 0 0 12px 0;
+    font-size: 1.4rem;
+    color: #083f08;
+    font-weight: 700;
+    text-align: left;
+    border-left: 4px solid #073a07;
+    padding-left: 12px;
+}
+
+.product .description,
+.product .benefits,
+.product .instructions {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 8px 0;
+    line-height: 1.5;
+    text-align: left;
+    padding-left: 16px;
+}
+
+.product .description {
+    color: rgba(2, 0, 70, 0.95);
+    font-weight: 500;
+}
+
+.product .benefits {
+    color: rgba(0, 75, 121, 0.9);
+    font-style: italic;
+}
+
+.product .instructions {
+    color: rgba(0, 128, 23, 0.85);
+}
+
+/* Grid de imágenes - cada una en su caja */
+.product-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.product img {
+    background: rgba(255, 255, 255, 0.12);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 8px;
+    width: 100% !important;
+    max-width: 150px;
+    height: auto;
+    display: block !important;
+    margin: 0 auto !important;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.product img:hover {
+    background: rgba(255, 255, 255, 0.18);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
 }
 
 /* Marcas, peso y pequeños detalles */
 .brand, .weight {
     display: inline-block;
-    margin-right: 0.4rem;
+    margin: 4px;
     font-size: 0.9rem;
-    color: #333;
+    color: #fff;
+    background: rgba(0,0,0,0.35);
+    padding: 4px 10px;
+    border-radius: 6px;
 }
 
-.description, .benefits, .instructions {
-    font-size: 0.9rem;
-    color: #333;
-    margin-top: 0.25rem;
+.product > .brand,
+.product > .weight {
+    text-align: center;
 }
 
 
