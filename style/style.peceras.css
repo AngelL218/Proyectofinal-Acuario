@@ -8,8 +8,12 @@ body {
 }
 
 p {
-    color: rgb(228, 228, 228);
-    font-size: 25px;
+    color: rgba(235, 245, 240, 0.95);
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto 14px;
+    text-align: center;
 }
 
 h1 {
@@ -19,8 +23,13 @@ h1 {
 }
 
 h2 {
-    color: darkslateblue;
+    color: #e8fff0; /* tono claro verdoso que combina con el fondo */
     text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    margin: 18px 0;
+    letter-spacing: 0.4px;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.35);
 }
 /* Header fijo */
 .site-header {
@@ -173,4 +182,89 @@ h2 {
     border: none;
     box-shadow: none;
     border-radius: 8px; /* asegura que no sea circular en el header */
+}
+
+/* ==========================
+   Estilos para sección de accesorios
+   ========================== */
+.accesorios{
+    max-width:1000px;
+    margin:20px auto;
+    padding:18px;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap:16px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius:12px;
+}
+.accesorios > h2,
+.accesorios > p {
+    grid-column: 1 / -1;
+    margin: 0 0 8px 0;
+    color: #fff;
+}
+.accesorio-item{ /* cada tarjeta */
+    margin: 0;
+}
+.imagen-accesorio{
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius:10px;
+    padding:12px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    align-items:center;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.22);
+}
+.imagen-accesorio img,
+.imagen-accesorio .images img{ /* imagen principal y miniaturas: mismo tamaño para consistencia */
+    width:220px;
+    height:150px;
+    object-fit:cover;
+    border-radius:8px;
+    display:block;
+}
+.imagen-accesorio .images{ /* contenedor de mini-imágenes */
+    display:flex;
+    gap:8px;
+    align-items:center;
+    justify-content:center;
+}
+.imagen-accesorio .images img{
+    border-radius:6px; /* miniaturas con borde ligeramente más pequeño */
+}
+.imagen-accesorio .info{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    text-align:center;
+    width:100%;
+}
+.imagen-accesorio .price{
+    font-size:1.05rem;
+    font-weight:800;
+    color: #4eff4e; /* verde que combina con las peceras */
+    background: transparent;
+    display:inline-block;
+    padding:6px 12px;
+    border-radius:20px;
+    margin:6px auto 0 auto;
+    text-align:center;
+    min-width:68px;
+}
+.imagen-accesorio .desc{
+    margin:0;
+    color: rgba(230,230,230,0.95);
+    font-size:0.98rem;
+    line-height:1.4;
+}
+.accesorio-item h3{ margin:8px 0 6px 0; color:#fff }
+
+@media (max-width:900px){
+    .accesorios{ grid-template-columns: 1fr }
+    .imagen-accesorio{ align-items:flex-start }
+    .imagen-accesorio img{ width:100%; height:auto; max-width:360px }
+    .imagen-accesorio .images img{ width:80px; height:56px }
 }
