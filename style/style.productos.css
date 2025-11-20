@@ -151,8 +151,8 @@ h2 {
 
 .product h3 {
     margin: 0 0 12px 0;
-    font-size: 1.4rem;
-    color: #083f08;
+    font-size: 1.7rem;
+    color: #ffffff;
     font-weight: 700;
     text-align: left;
     border-left: 4px solid #073a07;
@@ -162,8 +162,8 @@ h2 {
 .product .description,
 .product .benefits,
 .product .instructions {
-    font-size: 0.95rem;
-    color: rgba(255, 255, 255, 0.85);
+    font-size: 1.1rem;
+    color: #ffffff;
     margin: 8px 0;
     line-height: 1.5;
     text-align: left;

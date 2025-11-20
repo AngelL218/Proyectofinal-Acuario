@@ -29,34 +29,34 @@ body {
     box-shadow: 0 4px 12px rgba(0,0,0,0.28);
 }
 p {
-    color: rgb(7, 53, 21);
-    font-size: 25px;
+    color: #ffffff;
+    font-size: 30px;
     text-align: center;
     font-weight: 700;
     margin: 18px 0;
     letter-spacing: 0.4px;
-    text-shadow: 0 2px 6px rgba(255, 255, 255, 0.35);
+    text-shadow: 0 2px 8px rgba(0,0,0,0.6);
 }
 
 h1 {
-    color: rgb(18, 18, 189);
-    font-size: 60px;
+    color: #ffffff;
+    font-size: 72px;
     text-align: center;
     font-weight: 700;
     margin: 18px 0;
     letter-spacing: 0.4px;
-    text-shadow: 0 2px 6px rgba(0,0,0,0.35);
+    text-shadow: 0 3px 12px rgba(0,0,0,0.6);
 }
 
 
 h2 {
-    color: darkslateblue;
+    color: #ffffff;
     text-align: center;
-    font-size: 28px;
+    font-size: 36px;
     font-weight: 700;
     margin: 18px 0;
     letter-spacing: 0.4px;
-    text-shadow: 0 2px 6px rgba(0,0,0,0.35);
+    text-shadow: 0 2px 8px rgba(0,0,0,0.6);
 }
 
 /* Header fijo reutilizable */
@@ -159,3 +159,32 @@ img{ max-width:100%; height:auto; display:block; }
 @media (max-width: 1100px){
     .price-section, .features, .accesorios{ padding-left:12px; padding-right:12px; }
 }
+
+/* Unified button styling */
+:root{ 
+    --btn-bg: #00a8a0; 
+    --btn-color: #ffffff; /* text color: white for good contrast */
+    --btn-radius: 10px;
+    --btn-font-size: 20px; /* larger text */
+    --btn-font-weight: 800;
+}
+
+button, .btn, .btn-add, input[type="button"], input[type="submit"], a.btn{
+    background: var(--btn-bg);
+    color: var(--btn-color);
+    border: none;
+    padding: 10px 18px;
+    border-radius: var(--btn-radius);
+    cursor: pointer;
+    font-weight: var(--btn-font-weight);
+    font-size: var(--btn-font-size);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button:hover, .btn:hover, .btn-add:hover, input[type="button"]:hover, input[type="submit"]:hover, a.btn:hover{
+    filter: brightness(0.95);
+    transform: translateY(-2px);
+}
+
