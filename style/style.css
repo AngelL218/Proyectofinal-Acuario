@@ -29,13 +29,13 @@ body {
     box-shadow: 0 4px 12px rgba(0,0,0,0.28);
 }
 p {
-    color: rgb(0, 76, 22);
+    color: rgb(7, 53, 21);
     font-size: 25px;
     text-align: center;
     font-weight: 700;
     margin: 18px 0;
     letter-spacing: 0.4px;
-    text-shadow: 0 2px 6px rgba(0,0,0,0.35);
+    text-shadow: 0 2px 6px rgba(255, 255, 255, 0.35);
 }
 
 h1 {
@@ -130,4 +130,32 @@ h2 {
     box-shadow: none;
     border-radius: 8px;
 }
-    
+/* ==========================
+     Reglas responsivas globales
+     ========================== */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+.container{ max-width:1100px; margin:0 auto; padding:0 16px; }
+
+img{ max-width:100%; height:auto; display:block; }
+
+/* Ajustes para cabecera en pantallas pequeñas */
+@media (max-width: 900px){
+    .header-inner{ flex-direction:column; align-items:center; gap:8px; padding:8px 12px; }
+    .site-logo{ width:40px; height:40px }
+    .site-title{ font-size:18px }
+    .site-nav{ margin-left:0; flex-wrap:wrap; justify-content:center; gap:8px }
+}
+
+@media (max-width: 600px){
+    body{ padding-top: 88px; }
+    .site-header{ height:auto; padding:8px 0; }
+    .site-title{ font-size:16px }
+    .site-nav a{ padding:8px 10px; font-size:0.95rem }
+}
+
+/* Contenedores y secciones: menos padding en pantallas intermedias */
+@media (max-width: 1100px){
+    .price-section, .features, .accesorios{ padding-left:12px; padding-right:12px; }
+}
